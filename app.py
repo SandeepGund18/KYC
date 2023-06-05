@@ -6,6 +6,10 @@ from scipy.spatial.distance import cosine
 import cv2
 import os
 
+filename = "/home/ubuntu/.local/lib/python3.10/site-packages/keras_vggface/vggface.py"
+text = open(filename).read()
+open(filename, "w+").write(text.replace('keras.engine.topology', 'keras.utils.layer_utils'))
+
 UPLOAD_FOLDER = r'static/images/'
 app = Flask(__name__, template_folder='templates')
 app.secret_key = "secret key"
