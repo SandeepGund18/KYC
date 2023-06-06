@@ -48,7 +48,7 @@ class face_rec():
 
     def id_verification(self,path):
         img =cv2.imread(path)
-        pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+        pytesseract.pytesseract.tesseract_cmd = r'Tesseract-OCR\tesseract.exe'
         text =   pytesseract.image_to_string(img)
         id_proof=re.findall("\d{4}\s\d{4}\s\d{4}|[A-Z]{5}\d{4}[A-Z]",text)
         
